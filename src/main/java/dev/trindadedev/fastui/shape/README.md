@@ -15,31 +15,31 @@ import dev.trindadedev.fastui.shape.shape
 new *SomeShape().applyTo(*SomeView);
 ```
 
-### RoundedCornersShape
+### RoundedCornerShape
 
 ``` Kotlin
-import dev.trindadedev.fastui.shape.RoundedCornersShape
+import dev.trindadedev.fastui.shape.RoundedCornerShape
 
 // Signatures in Kotlin style
-RoundedCornersShape(
+RoundedCornerShape(
   topStart: Int,
   topEnd: Int,
   bottomEnd: Int,
   bottomStart: Int
 )
 
-RoundedCornersShape(
+RoundedCornerShape(
   topStart: Float,
   topEnd: Float,
   bottomEnd: Float,
   bottomStart: Float
 )
 
-RoundedCornersShape(
+RoundedCornerShape(
   all: Int
 )
 
-RoundedCornersShape(
+RoundedCornerShape(
   all: Float
 )
 ```

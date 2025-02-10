@@ -9,13 +9,13 @@ import android.view.View
  * This class extracts the background color from the given view (if it's a [ColorDrawable])  
  * and applies rounded corners based on the provided radii values.
  */
-class RoundedCornersShape {
+class RoundedCornerShape {
 
   /** The drawable representing the rounded shape. */
   private val drawable = GradientDrawable()
 
   /**
-   * Creates a [RoundedCornersShape] with the specified corner radii.
+   * Creates a [RoundedCornerShape] with the specified corner radii.
    *
    * @param topStart The radius for the top-left corner.
    * @param topEnd The radius for the top-right corner.
@@ -38,7 +38,7 @@ class RoundedCornersShape {
   }
 
   /**
-   * Creates a [RoundedCornersShape] with the specified corner radii but in int.
+   * Creates a [RoundedCornerShape] with the specified corner radii but in int.
    *
    * @param topStart The radius for the top-left corner.
    * @param topEnd The radius for the top-right corner.
@@ -61,14 +61,14 @@ class RoundedCornersShape {
   }
 
   /**
-   * Creates a [RoundedCornersShape] with the same radius value in all corners.
+   * Creates a [RoundedCornerShape] with the same radius value in all corners.
    *
    * @param all The radius value to be used in all corners.
    */
   constructor(all: Float) : this(all, all, all, all)
 
   /**
-   * Creates a [RoundedCornersShape] with the same radius value in all corners but in int.
+   * Creates a [RoundedCornerShape] with the same radius value in all corners but in int.
    *
    * @param all The radius value to be used in all corners.
    */

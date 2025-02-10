@@ -1,0 +1,16 @@
+[versions]
+agp = "8.7.2"
+android-minSdk = "21"
+android-compileSdk = "35"
+android-buildToolsVersion = "35.0.0"
+lib-version = "1.0.0-alpha01"
+
+kotlin = "2.0.21"
+collection = "1.4.5"
+
+[libraries]
+androidx-collection = { module = "androidx.collection:collection", version.ref = "collection" }
+
+[plugins]
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

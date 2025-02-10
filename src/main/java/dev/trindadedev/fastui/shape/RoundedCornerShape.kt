@@ -1,5 +1,6 @@
 package dev.trindadedev.fastui.shape
 
+import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.GradientDrawable
 import android.view.View
@@ -13,6 +14,9 @@ class RoundedCornerShape {
 
   /** The drawable representing the rounded shape. */
   private val drawable = GradientDrawable()
+
+  /** */
+  private var imageMode = false
 
   /**
    * Creates a [RoundedCornerShape] with the specified corner radii.
@@ -75,14 +79,25 @@ class RoundedCornerShape {
   constructor(all: Int) : this(all, all, all, all)
 
   /**
+   * Set the mode to image
+   * Will use Transparent Colors instead get color from background
+   */
+  fun imageMode(): RoundedCornerShape {
+    imageMode = true
+    return this
+  }
+
+  /**
    * Applies the shaped background.
    *
    * @param view View to be applied.
    */
   fun applyTo(view: View) {
     val viewDrawable = view.background
-    if (viewDrawable is ColorDrawable) {
+    if (viewDrawable is ColorDrawable && !imageMode) {
       drawable.setColor(viewDrawable.color)
+    } else {
+      drawable.setColor(Color.TRANSPARENT)
     }
     view.background = drawable
   }

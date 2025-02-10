@@ -17,7 +17,7 @@ new *SomeShape().applyTo(*SomeView);
 
 ### RoundedCornerShape
 
-``` Kotlin
+``` kotlin
 import dev.trindadedev.fastui.shape.RoundedCornerShape
 
 // Signatures in Kotlin style
@@ -42,4 +42,12 @@ RoundedCornerShape(
 RoundedCornerShape(
   all: Float
 )
+```
+
+### CircleShape
+``` kotlin
+import dev.trindadedev.fastui.shape.CircleShape
+
+class CircleShape(): RoundedCornerShape(50)
+
 ```

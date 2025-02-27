@@ -10,7 +10,7 @@ import android.view.View
  * This class extracts the background color from the given view (if it's a [ColorDrawable])  
  * and applies rounded corners based on the provided radii values.
  */
-open class RoundedCornerShape {
+open class RoundedCornerShape: Shape {
 
   /** The drawable representing the rounded shape. */
   private val drawable = GradientDrawable()
@@ -92,7 +92,7 @@ open class RoundedCornerShape {
    *
    * @param view View to be applied.
    */
-  open fun applyTo(view: View) {
+  override fun applyTo(view: View) {
     val viewDrawable = view.background
     if (viewDrawable is ColorDrawable && !imageMode) {
       drawable.setColor(viewDrawable.color)
